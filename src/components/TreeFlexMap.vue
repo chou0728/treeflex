@@ -57,6 +57,8 @@ export default {
   methods: {
     addNode(childKey) {
       const currentNode = this.treeData.childrenMap[childKey]
+      if (currentNode.children.length > 0) return
+
       // 抓取currentNode底下該有的Child資料
       const data = {
         id: '1-2',
