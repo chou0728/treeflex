@@ -22,3 +22,16 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.tf-nc {
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.tf-nc:hover {
+  color: #fff;
+  background: rgb(42, 116, 252);
+}
+</style>
