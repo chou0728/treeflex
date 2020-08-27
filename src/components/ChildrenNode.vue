@@ -1,12 +1,7 @@
 <template>
   <li>
     <!-- parent node -->
-    <div class="tf-nc" @click="addNode(node.id)">
-      <div>{{ node.title }}</div>
-      <div v-for="(desc, index) in node.desc" :key="index">
-        {{ desc }}
-      </div>
-    </div>
+    <ParentNode :node="node" @node-click="addNode" />
     <!-- children node -->
     <ul v-if="node.children.length > 0">
       <ChildrenNode
@@ -21,8 +16,13 @@
 </template>
 
 <script>
+import ParentNode from './ParentNode'
+
 export default {
   name: 'ChildrenNode',
+  components: {
+    ParentNode
+  },
   props: {
     node: {
       type: Object
