@@ -1,5 +1,5 @@
 <template>
-  <div class="tf-tree tf-gap-sm">
+  <div class="tf-tree tf-custom tf-gap-lg">
     <ul>
       <li>
         <!-- parent node -->
@@ -93,3 +93,37 @@ export default {
   }
 }
 </script>
+<style>
+.tf-custom {
+  font-size: 10px;
+}
+.tf-custom .tf-nc {
+  height: 5em;
+  width: 5em;
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.tf-custom .tf-nc:hover {
+  color: #fff;
+  background: dodgerblue;
+}
+
+/* make the horizontal and vertical connectors thick and change their color */
+
+.tf-custom .tf-nc:before,
+.tf-custom .tf-nc:after {
+  border-left-color: dodgerblue;
+  border-left-width: 2px;
+}
+
+.tf-custom li li:before {
+  border-top-color: dodgerblue;
+  border-top-width: 2px;
+}
+</style>

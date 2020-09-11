@@ -3,7 +3,7 @@
     <!-- parent node -->
     <ParentNode :node="node" @node-click="addNode" />
     <!-- children node -->
-    <ul v-if="node.children.length > 0">
+    <ul v-if="node.children.length > 0" class="child-wrap">
       <ChildrenNode
         v-for="key in node.children"
         :key="key"
@@ -39,7 +39,7 @@ export default {
 }
 </script>
 <style scoped>
-.tf-nc {
+/* .tf-nc {
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
@@ -47,6 +47,22 @@ export default {
 }
 .tf-nc:hover {
   color: #fff;
-  background: rgb(42, 116, 252);
+  background: dodgerblue;
+} */
+
+/* .child-wrap {
+  border: 1px solid #f0f;
+  position: relative;
 }
+.child-wrap::after {
+  content: '';
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: #f00;
+  position: absolute;
+  top: -1.2em;
+  left: calc(50% - 0.5em);
+  border-radius: 50%;
+} */
 </style>
