@@ -6,8 +6,8 @@
         {{ desc }}
       </div>
     </div>
-    <div class="tf-nc" @click="addNode(node.id)">
-      <div>{{ node.title }}</div>
+    <div class="tf-nc" @click="handleNodeClick(node.id)">
+      <div class="title">{{ node.title }}</div>
     </div>
   </el-tooltip>
 </template>
@@ -21,7 +21,7 @@ export default {
     }
   },
   methods: {
-    addNode(id) {
+    handleNodeClick(id) {
       this.$emit('node-click', id)
     }
   }
